@@ -26,41 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="todo_flask.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/todo_flask.py">
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/todo/templates/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6188925">
-              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <marker date="1443909265157" expanded="true" signature="665:683" placeholder="select * fro..todo..." />
-                <marker date="1443909265157" expanded="true" signature="898:924" placeholder="delete from ..." />
-                <marker date="1443909265157" expanded="true" signature="905:914" placeholder="select * fro..todo..." />
-                <marker date="1443909265157" expanded="true" signature="1136:1864" placeholder="INSERT INTO ..." />
-                <marker date="1443909265157" expanded="true" signature="1158:1205" placeholder="INSERT INTO ..." />
-                <marker date="1443909265157" expanded="true" signature="1444:1475" placeholder="select * fro..todo..." />
-                <marker date="1443909265157" expanded="true" signature="1629:1636" placeholder="ALTER TABLE todo..." />
-                <marker date="1443909265157" expanded="true" signature="1629:1662" placeholder="UPDATE todo ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.333333">
+            <state vertical-scroll-proportion="0.5212947">
               <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.666667">
-              <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -144,20 +114,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo_flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo_flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -169,11 +125,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/todo" />
     </key>
   </component>
   <component name="RunManager" selected="Python.sql_todo">
@@ -190,7 +150,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="todo_flask" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql_todo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/todo/sql_todo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -396,7 +356,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="todo_flask" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/todo_flask.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/todo/todo_flask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -412,6 +372,9 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1a03682a-0cd6-4cdb-931a-4c2ed3d441e6" name="Default" comment="" />
@@ -423,16 +386,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25262576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25262576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,6 +409,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -456,25 +427,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/todo_flask.py">
+    <entry file="file://$PROJECT_DIR$/todo/todo_flask.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1443909265157" expanded="true" signature="665:683" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="898:924" placeholder="delete from ..." />
-            <marker date="1443909265157" expanded="true" signature="905:914" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="1136:1864" placeholder="INSERT INTO ..." />
-            <marker date="1443909265157" expanded="true" signature="1158:1205" placeholder="INSERT INTO ..." />
-            <marker date="1443909265157" expanded="true" signature="1444:1475" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="1629:1636" placeholder="ALTER TABLE todo..." />
-            <marker date="1443909265157" expanded="true" signature="1629:1662" placeholder="UPDATE todo ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="ALTER TABLE todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="UPDATE todo ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/create.html">
+    <entry file="file://$PROJECT_DIR$/todo/templates/create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.333333">
           <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
@@ -482,7 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql_todo.py">
+    <entry file="file://$PROJECT_DIR$/todo/sql_todo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
@@ -496,37 +467,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list.html">
+    <entry file="file://$PROJECT_DIR$/todo/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.666667">
+        <state vertical-scroll-proportion="0.5826235">
           <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.333333">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo_flask.py">
+    <entry file="file://$PROJECT_DIR$/todo/todo_flask.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6188925">
           <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1443909265157" expanded="true" signature="665:683" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="898:924" placeholder="delete from ..." />
-            <marker date="1443909265157" expanded="true" signature="905:914" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="1136:1864" placeholder="INSERT INTO ..." />
-            <marker date="1443909265157" expanded="true" signature="1158:1205" placeholder="INSERT INTO ..." />
-            <marker date="1443909265157" expanded="true" signature="1444:1475" placeholder="select * fro..todo..." />
-            <marker date="1443909265157" expanded="true" signature="1629:1636" placeholder="ALTER TABLE todo..." />
-            <marker date="1443909265157" expanded="true" signature="1629:1662" placeholder="UPDATE todo ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="select * fro..todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="ALTER TABLE todo..." />
+            <marker date="1443909265157" expanded="true" signature="-1:-1" placeholder="UPDATE todo ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo/templates/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5212947">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
