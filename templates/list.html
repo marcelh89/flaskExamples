@@ -1,0 +1,31 @@
+<!doctype html>
+<title>Todo</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+
+    {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+    {% endfor %}
+    {% block body %}
+
+        <div class="well-small">
+            <h1>Todos</h1>
+
+            <a href="{{ url_for('create_todo') }}">Erstellen</a>
+
+            <ul>
+                {% for todo in todos %}
+                    <li><label>{{ todo.task }}</label>
+
+                        <p><a href="{{ url_for('delete_todo', id = todo.id) }}">löschen</a></p>
+
+                        <p><a href="{{ url_for('edit_todo', id = todo.id) }}">editieren</a></p>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+
+    {% endblock %}
+</div>
