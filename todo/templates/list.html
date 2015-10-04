@@ -1,31 +1,43 @@
-<!doctype html>
-<title>Todo</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
+{% extends "bootstrap/base.html" %}
 
-    {% for message in get_flashed_messages() %}
-        <div class=flash>{{ message }}</div>
-    {% endfor %}
-    {% block body %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet"
+          href="{{ url_for('.static', filename='style.css') }}">
+{% endblock %}
 
-        <div class="well-small">
-            <h1>Todos</h1>
+{% block content %}
 
-            <a href="{{ url_for('create_todo') }}">Erstellen</a>
+    <div class="content">
 
-            <ul>
-                {% for todo in todos %}
-                    <li><label>{{ todo.task }}</label>
 
-                        <p><a href="{{ url_for('delete_todo', id = todo.id) }}">löschen</a></p>
-
-                        <p><a href="{{ url_for('edit_todo', id = todo.id) }}">editieren</a></p>
-                    </li>
-                {% endfor %}
-            </ul>
-
+        <div class="well-lg">
+            <h1 class="text-center">Todos</h1>
         </div>
 
+        <ul class="list-group">
+            <li class="span9 btn-block">
+                <a href="{{ url_for('create_todo') }}" class="btn btn-large btn-block btn-info full-width angularcorners" type="button">Erstellen</a>
+            </li>
 
-    {% endblock %}
+            {% for todo in todos %}
+
+                <li class="list-group-item"><label>{{ todo.task }}</label>
+
+                    <a href="{{ url_for('delete_todo', id = todo.id) }}"><span
+                            class="glyphicon glyphicon-trash pull-right fixpadding"></span>
+                    </a>
+
+                    <a href="{{ url_for('edit_todo', id = todo.id) }}"><span
+                            class="glyphicon glyphicon-edit pull-right fixpadding"></span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+    </div>
+
+
+{% endblock %}
 </div>

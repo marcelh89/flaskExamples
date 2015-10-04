@@ -1,11 +1,13 @@
 import sqlite3, os.path
 from flask import Flask, render_template, g, url_for, redirect, request
+from flask_bootstrap import Bootstrap
 # ------------------------configuration---------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.join(BASE_DIR, "todo.db")
 
 app = Flask(__name__)
+Bootstrap(app)
 
 
 def connect_db():

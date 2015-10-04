@@ -1,0 +1,19 @@
+.content {
+    font-size: 2em;
+}
+
+.fixpadding {
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+button .full-width {
+    width: 100%;
+/ / display : block;
+/ / only if you 're having issues
+}
+
+.angularcorners {
+    border-radius: 0px;
+}

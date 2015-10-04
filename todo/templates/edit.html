@@ -1,22 +1,27 @@
-<!doctype html>
-<title>Todo</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
+{% extends "bootstrap/base.html" %}
+{% block content %}
 
-  {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
-  {% endfor %}
-  {% block body %}
+    <div class="content">
 
-     <div class="well-small">
-        <h1>Todo editieren</h1>
-        <form method="POST">
-            <input type="text" name="task" id="task" value="{{ task }}">
-            <button type="submit">Editieren</button>
-        </form>
+
+        <div class="well-lg">
+            <h1 class="text-center">Todo editieren</h1>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+
+                <form method="POST">
+                    <input type="text" name="task" id="task" value="{{ task }}">
+                    <button type="submit">Editieren</button>
+                </form>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-  {% endblock %}
-</div>
+{% endblock %}
