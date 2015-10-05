@@ -25,29 +25,24 @@ def get_meals(soup, id):
     container = soup.find("div", {"id": id})
     tables = container.find_all("table", {'class': 'bill_of_fare'})
 
-    # seperate each row  # attention exclude those elements which only has '\n' in it
-    dates = [date.text for date in container.find_all("div", {'class': 'date'})]
-    headings = [tr.text for tr in tables[0].find_all('tr')[1] if tr != '\n']
-    meals = [tr.text for tr in tables[0].find_all('tr')[2] if tr != '\n']
-    # get a list of all alt textes of the image tags inside a row for each entry of the week
-    icons = [list(img.get('alt', '') for img in tr.find_all('img')) for tr in
-             tables[0].find_all('tr')[3] if tr != '\n']
+    meals = [get_meal(table) for table in tables]
 
-    meals = [Meal(date=date, heading=heading, meal=meal, icons=icons) for
-             date, heading, meal, icons in
-             zip(dates, headings, meals, icons)]
-
-    return json.dumps(meals, default=lambda o: o.__dict__,
-                      sort_keys=True)
+    return meals
 
 
-class Meal:
-    def __init__(self, date, heading, meal, icons):
-        self.date = date
-        self.heading = heading
-        self.meal = meal
-        self.icons = icons
+def get_meal(table):
+    rows = table.find_all('tr')
+    date = rows[0].text
+    headings = [col.text for col in rows[1] if col != '\n']
+    meals = [col.text for col in rows[2] if col != '\n']
+    icons = [list(img.get('alt', '') for img in col.find_all('img')) for col in
+             rows[3] if col != '\n']
 
-    def to_json(self):
-        return json.dumps(self, default=lambda o: o.__dict__,
-                          sort_keys=True, indent=4)
+    meal = {
+        'date': date,
+        'headings': headings,
+        'meals': meals,
+        'icons': icons
+    }
+
+    return meal
