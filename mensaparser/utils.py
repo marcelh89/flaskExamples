@@ -15,8 +15,7 @@ def get_api_as_json():
 
     data = {}
     data['date'] = str(datetime.datetime.now())
-    data['thisweek_meals'] = thisweek_meals
-    data['nextweek_meals'] = nextweek_meals
+    data['meals'] = thisweek_meals + nextweek_meals
 
     return data
 
@@ -40,9 +39,8 @@ def get_meal(table):
 
     meal = {
         'date': date,
-        'headings': headings,
-        'meals': meals,
-        'icons': icons
+        'meals': [{'heading': heading, 'meal': meal, 'icon': icon} for heading, meal, icon in
+                  zip(headings, meals, icons)]
     }
 
     return meal
