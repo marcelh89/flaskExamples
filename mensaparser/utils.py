@@ -75,7 +75,7 @@ def get_todaysmeals(soup, id):
 
         locale.setlocale(locale.LC_ALL, 'de_DE.utf8')
         conv = time.strptime(date, "%d. %B %Y")
-        date = time.strftime('%a %d. %B %Y', conv)
+        date = time.strftime('%a, %d. %B %Y', conv)
 
         meals = []
         meals.append(
