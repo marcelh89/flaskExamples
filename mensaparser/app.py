@@ -58,7 +58,7 @@ def write_file_to_system():
 
 def actualize_api():
     # create file and fill with api
-    with open("api", "a+") as f:
+    with open("api", "w+") as f:
         data = json.dumps(get_api())
         f.write(data)
 
