@@ -1,10 +1,10 @@
 __author__ = 'marcman'
 
-import requests, json, datetime
+import requests, datetime, time, locale
 from bs4 import BeautifulSoup
 
 
-def get_api_as_json():
+def get_api():
     URL = 'http://www.studentenwerk-potsdam.de/speiseplan/'
     r = requests.get(URL)
     soup = BeautifulSoup(r.text, "html.parser")
@@ -72,6 +72,10 @@ def get_todaysmeals(soup, id):
         date = container.find('h2', {'id': 'ueberschrift_h2'})
         date = str(date.text)
         date = date[date.find('den') + 3:].strip()
+
+        locale.setlocale(locale.LC_ALL, 'de_DE.utf8')
+        conv = time.strptime(date, "%d. %B %Y")
+        date = time.strftime('%a %d. %B %Y', conv)
 
         meals = []
         meals.append(
