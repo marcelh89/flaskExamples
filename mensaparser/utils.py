@@ -22,9 +22,12 @@ def get_api_as_json():
 
     return data
 
+
 '''
     wird verwendet fuer alle tage ab morgen
 '''
+
+
 def get_meals(soup, id):
     container = soup.find("div", {"id": id})
     tables = container.find_all("table", {'class': 'bill_of_fare'})
@@ -33,9 +36,12 @@ def get_meals(soup, id):
 
     return meals
 
+
 '''
     wird verwendet fuer alle tage ab morgen
 '''
+
+
 def get_meal(table):
     rows = table.find_all('tr')
     date = rows[0].text
@@ -52,20 +58,42 @@ def get_meal(table):
 
     return meal
 
+
 '''
     wird verwendet fuer heute
 '''
+
+
 def get_todaysmeals(soup, id):
     container = soup.find("div", {"id": id})
     tables = container.find_all("table", {'class': 'bill_of_fare'})
 
-    meals = [get_todaysmeal(table, container) for table in tables]
+    if not tables:
+        date = container.find('h2', {'id': 'ueberschrift_h2'})
+        date = str(date.text)
+        date = date[date.find('den') + 3:].strip()
+
+        meals = []
+        meals.append(
+            {'date': date,
+             'meals': [{'heading': '',
+                        'meal': 'Die Mittagszeit in unseren Mensen ist bereits beendet. Daher steht der heutige Speiseplan nicht mehr zur Verfügung',
+                        'icon': ''}
+                       ]}
+        )
+
+
+    else:
+        meals = [get_todaysmeal(table, container) for table in tables]
 
     return meals
+
 
 '''
     wird verwendet fuer heute
 '''
+
+
 def get_todaysmeal(table, container):
     rows = table.find_all('tr')
     date = container.find('h2', {'id': 'ueberschrift_h2'})
@@ -84,4 +112,3 @@ def get_todaysmeal(table, container):
     }
 
     return meal
-
